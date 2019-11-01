@@ -98,8 +98,10 @@ if __name__ == '__main__':
   lr = 1e-6
   i = 0
   j = 0
+  
   #creatring Object for the class LinearRegression
   LR = MutliVariableLinearRegression(x, lr)
+  
   #gradient descent
   t = LR.gradient_descent(x, y, i)
   print("Theta 0 = ",t[0])
@@ -116,6 +118,7 @@ if __name__ == '__main__':
     blood_group = 2
   elif blood_group == 'O':
     blood_group = 3
+  
   print("Enter the age of the employee - ", end = "")
   age = int(input())
   print("Enter the eating habit of the employee on a scale of 0 - 10 - ", end = "")
@@ -124,6 +127,7 @@ if __name__ == '__main__':
   active_lifestyle = int(input())
   salary = t[0] + t[1]*age + t[2]*healthy_eating + t[3]*active_lifestyle + t[4]*blood_group
   print("The predicted salary of the employee is: ",salary)
+  
   #correlation matrix and heatmap
   corrmat = df.corr()
   f, ax = pplt.subplots(figsize=(12, 9))
